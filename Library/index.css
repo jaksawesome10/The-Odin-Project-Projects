@@ -1,0 +1,42 @@
+
+#newBook{
+  display: block;
+  margin: auto;
+}
+
+#books{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 800px;
+  min-height: 200px;
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+#noBooks{
+  text-align: center;
+  margin-top: 80px;
+}
+
+.book{
+  width: 400px;
+  margin: auto;
+  margin-top: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  line-height: 20px;
+}
+
+h1{
+  text-align: center;
+}
+
+hr{
+  width: 300px;
+}
+
+*{
+  font-family: verdana;
+  font-weight: normal;
+}
