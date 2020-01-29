@@ -51,8 +51,16 @@ function render(){
       Title: ` + book.title + `<br/>
       Pages: ` + book.pages + `<br/>
       Read: ` + book.read + `<br/>
-      `
+      `;
       booksDiv.append(bookElement);
+      var deleteButton = document.createElement("button");
+      deleteButton.innerHTML = "delete";
+      deleteButton.value = myLibrary.indexOf(book);
+      deleteButton.onclick = function(){
+        myLibrary.splice(this.value, 1);
+        render();
+      };
+      bookElement.append(deleteButton);
     });
   }
 }
