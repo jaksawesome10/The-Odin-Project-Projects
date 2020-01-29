@@ -1,7 +1,7 @@
 
 var myLibrary = [];
 
-
+var dialogueOpen = false;
 
 function Book(author, title, pages, read){
   this.author = author;
@@ -15,17 +15,19 @@ function addBookToLibrary(book){
 }
 
 function openDialogue(){
-  if(window.getComputedStyle(document.getElementById("bookDialogue")) === 'none'){
+  if(!dialogueOpen){
     document.getElementById("author").value = "";
     document.getElementById("title").value = "";
     document.getElementById("pages").value = "";
     document.getElementById("read").checked = false;
     document.getElementById("bookDialogue").style.display = "block";
   }
+  dialogueOpen = true;
 }
 
 function closeDialogue(){
   document.getElementById("bookDialogue").style.display = "none";
+  dialogueOpen = false;
 }
 
 function render(){
