@@ -8,8 +8,17 @@
   <h1>Library</h1>
   <hr/>
   <br/>
-  <button id="newBook">New Book</button>
+  <button id="newBook" onclick="openDialogue();">New Book</button>
   <br/>
   <div id="books">
+  </div>
+  <div id="bookDialogue">
+    <br/>
+    <button class="userInput" onclick="closeDialogue();">Close</button><br/>
+    <input id="author" class="userInput" placeholder="author" type="text"/><br/>
+    <input id="title" class="userInput" placeholder="title" type="text"/><br/>
+    <input id="pages" class="userInput" placeholder="pages" type="number"/><br/>
+    <div class="userInput">Read: <input id="read" type="checkbox"/></div><br/>
+    <button class="userInput" onclick="addBook();">Add book</button>
   </div>
 </body>

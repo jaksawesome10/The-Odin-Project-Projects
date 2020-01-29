@@ -1,5 +1,7 @@
 
-let myLibrary = [];
+var myLibrary = [];
+
+
 
 function Book(author, title, pages, read){
   this.author = author;
@@ -10,6 +12,20 @@ function Book(author, title, pages, read){
 
 function addBookToLibrary(book){
   myLibrary.push(book);
+}
+
+function openDialogue(){
+  if(window.getComputedStyle(document.getElementById("bookDialogue")) === 'none'){
+    document.getElementById("author").value = "";
+    document.getElementById("title").value = "";
+    document.getElementById("pages").value = "";
+    document.getElementById("read").checked = false;
+    document.getElementById("bookDialogue").style.display = "block";
+  }
+}
+
+function closeDialogue(){
+  document.getElementById("bookDialogue").style.display = "none";
 }
 
 function render(){
@@ -36,5 +52,20 @@ function render(){
       `
       booksDiv.append(bookElement);
     });
+  }
+}
+
+function addBook(){
+  author = document.getElementById("author").value;
+  title = document.getElementById("title").value;
+  pages = document.getElementById("pages").value;
+  read = document.getElementById("read").checked;
+  if(author == "" || title == "" || pages == ""){
+    alert("Please enter the info");
+  }
+  else{
+    addBookToLibrary(new Book(author, title, pages, read));
+    closeDialogue();
+    render();
   }
 }

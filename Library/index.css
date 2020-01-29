@@ -18,6 +18,19 @@
   margin-top: 80px;
 }
 
+#bookDialogue{
+  display: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  width: 400px;
+  height: 270px;
+  position: absolute;
+  top: 150px;
+  left: 50vw;
+  margin-left: -200px;
+}
+
 .book{
   width: 400px;
   margin: auto;
@@ -26,6 +39,12 @@
   border-radius: 5px;
   padding: 10px;
   line-height: 20px;
+}
+
+.userInput{
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 h1{
