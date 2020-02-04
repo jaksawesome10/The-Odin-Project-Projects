@@ -61,20 +61,20 @@ function render(){
         render();
       };
       bookElement.append(deleteButton);
-      bookElement.innerHTML = bookElement.innerHTML+"<br/>Read ";
+      bookElement.append(document.createElement("br"));
       var readToggle = document.createElement("input");
       readToggle.value = myLibrary.indexOf(book);
       readToggle.type = "checkbox";
       readToggle.checked = book.read;
+      readToggle.innerHTML = "Read: ";
       readToggle.onclick = function(){
-        console.log(this.checked);
-        console.log(this.value);
         myLibrary[this.value].read = this.checked;
         render();
-        console.log(this.checked);
-        console.log(this.value);
       };
-      bookElement.append(readToggle);
+      var containerDiv = document.createElement("div");
+      containerDiv.innerHTML = "Read: ";
+      containerDiv.append(readToggle);
+      bookElement.append(containerDiv);
     });
   }
 }
