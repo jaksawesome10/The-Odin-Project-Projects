@@ -1,4 +1,6 @@
 
+//Doesn't implement local storage
+
 var myLibrary = [];
 
 var dialogueOpen = false;
